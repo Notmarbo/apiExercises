@@ -12,17 +12,18 @@ window.onload = () => {
                 let cell1 = row.insertCell(0);
                 let cell2 = row.insertCell(1);
                 let cell3 = row.insertCell(2);
-                let cell4 = row.insertCell(3);
-                let cell5 = row.insertCell(4);
-                let cell6 = row.insertCell(5);
-                let cell7 = row.insertCell(6);
-                cell1.innerHTML = data[i].id
-                cell2.innerHTML = data[i].dept
+                let a = document.createElement("a");
+
+                a.innerHTML = data[i].courseName;
+                a.title = "this is a test";
+                a.href = `http://localhost:8081/details.html?courseid=${data[i].id}`;
+
+
+                cell1.innerHTML = data[i].dept
+                cell2.appendChild(a);
                 cell3.innerHTML = data[i].courseNum
-                cell4.innerHTML = data[i].courseName
-                cell5.innerHTML = data[i].instructor
-                cell6.innerHTML = data[i].startDate
-                cell7.innerHTML = data[i].numDays
+                
             }
         })
+        
 }
