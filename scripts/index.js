@@ -16,7 +16,7 @@ window.onload = () => {
 
                 a.innerHTML = data[i].courseName;
                 a.title = "this is a test";
-                a.href = `http://localhost:8081/details.html?courseid=${data[i].id}`;
+                a.href = `details.html?courseid=${data[i].id}`;
 
 
                 cell1.innerHTML = data[i].dept
